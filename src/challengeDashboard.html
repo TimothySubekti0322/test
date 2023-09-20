@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Dashboard</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="challengeDashboard.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@700&family=Volkhov:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="../index.html">Back to Landing Page</a>
+    <main class="p-4">
+
+        <!-- Header Section -->
+        <header class="p-2">
+            <div class="flex items-center gap-x-8">
+                <img src="../public/image/backArrow.svg" alt="">
+                <div class="text-xl poppins">Health Challengges</div>
+                <img src="../public/image/avatar.svg" alt="" class="mr-4">
+            </div>
+        </header>
+
+        <section id="subHeader" class="mt-6">
+            <div class="flex gap-2">
+                <!-- badge -->
+                <div class="flex items-center">
+                    <img src="../public/image/badge.svg" alt="" class="w-8 h-8">
+                    <div class="ml-1 text-xs">15 badge</div>
+                </div>
+
+                <!-- Complete Task -->
+                <div class="flex items-center ml-2">
+                    <img src="../public/image/approval.svg" alt="" class="w-8 h-8">
+                    <div class="ml-1 text-xs">20 Complete Task</div>
+                </div>
+
+                <!-- Point -->
+                <div class="flex items-center ml-2">
+                    <img src="../public/image/point.svg" alt="" class="w-8 h-8">
+                    <div class="ml-1 text-xs">2500 point</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="searchBar" class="px-3 mt-6">
+            <div class="relative">
+                <input type="text" id="search" name="search" class="w-full h-12 pl-12 border rounded-lg shadow-md"
+                    placeholder="Cari Tantangan">
+                <button>
+                    <img src="../public/image/search.svg" alt="" class="absolute top-[0.7rem] left-[0.5rem]">
+                </button>
+            </div>
+        </section>
+
+        <section id="challenge" class="px-2 mt-2">
+
+            <!-- Section atas -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="../public/image/trophy.svg" alt="">
+                    <div class="ml-2">Challenge Anda</div>
+                </div>
+                <div>
+                    <a href="#" class="font-medium underline underline-offset-4">Lihat Semua ></a>
+                </div>
+            </div>
+
+            <!-- Section bawah -->
+            <div class="w-full bg-[#EAF3F5] flex justify-between px-3 py-4 rounded-lg mt-2 space-x-4">
+                <!-- Image -->
+                <img src="../public/image/hobby-1.svg" alt="">
+
+                <!-- Run Challenge and proggres bar -->
+                <div class="flex flex-col flex-1">
+                    <div class="text-sm font-bold">Run Challenge</div>
+                    <div class="w-full mt-2 bg-white rounded-full">
+                        <div class="bg-black text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                            style="width: 81%"> 81%</div>
+                    </div>
+                </div>
+
+                <!-- Chevron -->
+                <div>
+                    <img src="../public/image/chevronRight.svg" alt="">
+                </div>
+            </div>
+
+            <div class="w-full bg-[#EAF3F5] flex justify-between px-3 py-4 rounded-lg mt-3 space-x-4">
+                <!-- Image -->
+                <img src="../public/image/hobby-2.svg" alt="">
+
+                <!-- Run Challenge and proggres bar -->
+                <div class="flex flex-col flex-1">
+                    <div class="font-bold tect-sm">Sleeping Challenge</div>
+                    <div class="w-full mt-2 bg-white rounded-full">
+                        <div class="bg-black text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                            style="width: 40%"> 40%</div>
+                    </div>
+                </div>
+
+                <!-- Chevron -->
+                <div>
+                    <img src="../public/image/chevronRight.svg" alt="">
+                </div>
+            </div>
+
+            <div class="w-full bg-[#EAF3F5] flex justify-between px-3 py-4 rounded-lg mt-3 space-x-4">
+                <!-- Image -->
+                <img src="../public/image/hobby-3.svg" alt="">
+
+                <!-- Run Challenge and proggres bar -->
+                <div class="flex flex-col flex-1">
+                    <div class="text-sm font-bold">Marathon 2023 Challenge</div>
+                    <div class="w-full mt-2 bg-white rounded-full">
+                        <div class="bg-black text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                            style="width: 60%"> 60%</div>
+                    </div>
+                </div>
+
+                <!-- Chevron -->
+                <div>
+                    <img src="../public/image/chevronRight.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="Rekomendasi" class="px-2 mt-6">
+            <!-- Section atas -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="../public/image/thumbsUp.svg" alt="">
+                    <div class="ml-2">Rekomendasi</div>
+                </div>
+                <div>
+                    <a href="#" class="font-medium underline underline-offset-4">Lihat Semua ></a>
+                </div>
+            </div>
+
+            <!-- section bawah -->
+            <div class="w-full mt-4 carousel rounded-box">
+                <div class="carousel-item">
+
+                    <!-- Item 1 -->
+                    <div class="w-full bg-[#EAF3F5] flex items-center px-4 py-3">
+                        <img src="../public/image/Food.svg" class="" />
+                        <div class="flex flex-col ml-4 space-y-2">
+                            <h1 class="font-bold">Makanan Sehat</h1>
+                            <div class="flex items-center justify-around space-x-3">
+                                <img src="../public/image/people.svg" alt="" />
+                                <div class="text-sm font-medium">112 peserta</div>
+                                <button
+                                    class="bg-[#079D49] py-[0.1rem] px-3 rounded-full text-white text-sm ml-2">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="w-full bg-[#EAF3F5] flex items-center px-4 py-3 ml-4">
+                        <img src="../public/image/Food.svg" class="" />
+                        <div class="flex flex-col ml-4 space-y-2">
+                            <h1 class="font-bold">Makanan Sehat</h1>
+                            <div class="flex items-center justify-around space-x-3">
+                                <img src="../public/image/people.svg" alt="" />
+                                <div class="text-sm font-medium">112 peserta</div>
+                                <button
+                                    class="bg-[#079D49] py-[0.1rem] px-3 rounded-full text-white text-sm ml-2">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="w-full bg-[#EAF3F5] flex items-center px-4 py-3 ml-4">
+                        <img src="../public/image/Food.svg" class="" />
+                        <div class="flex flex-col ml-4 space-y-2">
+                            <h1 class="font-bold">Makanan Sehat</h1>
+                            <div class="flex items-center justify-around space-x-3">
+                                <img src="../public/image/people.svg" alt="" />
+                                <div class="text-sm font-medium">112 peserta</div>
+                                <button
+                                    class="bg-[#079D49] py-[0.1rem] px-3 rounded-full text-white text-sm ml-2">Join</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="teamChallenge" class="px-2 mt-6 mb-16">
+            <!-- Section atas -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <img src="../public/image/chat.svg" alt="">
+                    <div class="ml-2">Team Challenge Popular</div>
+                </div>
+                <div>
+                    <a href="#" class="font-medium underline underline-offset-4">Lihat Semua ></a>
+                </div>
+            </div>
+
+            <!-- section bawah -->
+            <div class="w-full mt-4 carousel rounded-box">
+                <div class="carousel-item">
+
+                    <!-- Item 1 -->
+                    <div class="w-full bg-[#EAF3F5] flex items-center px-4 py-3">
+                        <img src="../public/image/runathon.svg" class="" />
+                        <div class="flex flex-col ml-4 space-y-2">
+                            <h1 class="font-bold">Makanan Sehat</h1>
+                            <div class="flex items-center justify-around space-x-3">
+                                <img src="../public/image/people.svg" alt="" />
+                                <div class="text-sm font-medium">1000 peserta</div>
+                                <button
+                                    class="bg-[#079D49] py-[0.1rem] px-3 rounded-full text-white text-sm ml-2">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="w-full bg-[#EAF3F5] flex items-center px-4 py-3 ml-4">
+                        <img src="../public/image/runathon.svg" class="" />
+                        <div class="flex flex-col ml-4 space-y-2">
+                            <h1 class="font-bold">Makanan Sehat</h1>
+                            <div class="flex items-center justify-around space-x-3">
+                                <img src="../public/image/people.svg" alt="" />
+                                <div class="text-sm font-medium">1000 peserta</div>
+                                <button
+                                    class="bg-[#079D49] py-[0.1rem] px-3 rounded-full text-white text-sm ml-2">Join</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="w-full bg-[#EAF3F5] flex items-center px-4 py-3 ml-4">
+                        <img src="../public/image/runathon.svg" class="" />
+                        <div class="flex flex-col ml-4 space-y-2">
+                            <h1 class="font-bold">Makanan Sehat</h1>
+                            <div class="flex items-center justify-around space-x-3">
+                                <img src="../public/image/people.svg" alt="" />
+                                <div class="text-sm font-medium">1000 peserta</div>
+                                <button
+                                    class="bg-[#079D49] py-[0.1rem] px-3 rounded-full text-white text-sm ml-2">Join</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>
