@@ -72,16 +72,39 @@
     </section>
 
     <!-- Container -->
-    <section
-      id="container"
-      class="flex flex-col justify-around space-y-4 px-9 bg-blue"
-    >
+    <section id="container" class="flex flex-col justify-around space-y-4 px-9">
       <!-- Title -->
       <h1 class="font-bold">Riwayat Percakapan</h1>
 
+      <!-- Modal Konfirmasi -->
+      <div
+        id="confirmationModal"
+        class="fixed inset-0 z-50 hidden overflow-auto bg-gray-800 bg-opacity-50 modal"
+      >
+        <div
+          class="w-1/2 p-4 mx-auto my-16 bg-white rounded-lg shadow-lg modal-content"
+        >
+          <p>Apakah Anda yakin ingin menghapus riwayat ini?</p>
+          <div class="flex justify-end mt-4">
+            <button
+              id="cancelDeleteButton"
+              class="px-4 py-2 mr-2 text-white bg-gray-400 rounded hover:bg-gray-500"
+            >
+              Batal
+            </button>
+            <button
+              id="confirmDeleteButton"
+              class="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600"
+            >
+              Hapus
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- riwayat 1 -->
       <div
-        class="bg-[#F5F5F5] rounded-lg flex flex-row px-2 justify-around items-center"
+        class="bg-[#F5F5F5] rounded-lg flex flex-row px-2 justify-around items-center riwayat-percakapan"
       >
         <img
           src="../public/assets/Icon/Chat Message.png"
@@ -91,16 +114,39 @@
         <p class="pl-4 text-xs">
           Saya merasa agak pusing dan lelah belakangan ini
         </p>
-        <img
-          src="../public/assets/Icon/Close.png"
-          alt=""
-          class="object-scale-down w-12 h-12"
-        />
+        <!-- Open the modal using ID.showModal() method -->
+        <button
+          class="px-0 mx-0 rounded-lg btn"
+          onclick="showDeleteConfirmation(this)"
+        >
+          <img
+            src="../public/assets/Icon/Close.png"
+            alt=""
+            class="object-scale-down w-12 h-12"
+          />
+        </button>
+
+        <!-- Modal Konfirmasi Hapus -->
+        <dialog class="modal" data-delete-target="riwayat-percakapan">
+          <div class="modal-box">
+            <h3 class="text-lg font-bold">Konfirmasi Hapus</h3>
+            <p class="py-4">Apakah Anda yakin ingin menghapus riwayat ini?</p>
+            <div class="modal-action">
+              <button
+                class="font-bold text-white bg-red-500 rounded-lg btn"
+                onclick="confirmDelete(this)"
+              >
+                Hapus
+              </button>
+              <button class="btn" onclick="cancelDelete(this)">Batal</button>
+            </div>
+          </div>
+        </dialog>
       </div>
 
-      <!-- riwayat 2 -->
+      <!-- riwayat 1 -->
       <div
-        class="bg-[#F5F5F5] rounded-lg flex flex-row px-2 justify-around items-center"
+        class="bg-[#F5F5F5] rounded-lg flex flex-row px-2 justify-around items-center riwayat-percakapan"
       >
         <img
           src="../public/assets/Icon/Chat Message.png"
@@ -110,16 +156,39 @@
         <p class="pl-4 text-xs">
           Saya merasa agak pusing dan lelah belakangan ini
         </p>
-        <img
-          src="../public/assets/Icon/Close.png"
-          alt=""
-          class="object-scale-down w-12 h-12"
-        />
+        <!-- Open the modal using ID.showModal() method -->
+        <button
+          class="px-0 mx-0 rounded-lg btn"
+          onclick="showDeleteConfirmation(this)"
+        >
+          <img
+            src="../public/assets/Icon/Close.png"
+            alt=""
+            class="object-scale-down w-12 h-12"
+          />
+        </button>
+
+        <!-- Modal Konfirmasi Hapus -->
+        <dialog class="modal" data-delete-target="riwayat-percakapan">
+          <div class="modal-box">
+            <h3 class="text-lg font-bold">Konfirmasi Hapus</h3>
+            <p class="py-4">Apakah Anda yakin ingin menghapus riwayat ini?</p>
+            <div class="modal-action">
+              <button
+                class="font-bold text-white bg-red-500 rounded-lg btn"
+                onclick="confirmDelete(this)"
+              >
+                Hapus
+              </button>
+              <button class="btn" onclick="cancelDelete(this)">Batal</button>
+            </div>
+          </div>
+        </dialog>
       </div>
 
-      <!-- riwayat 3 -->
+      <!-- riwayat 1 -->
       <div
-        class="bg-[#F5F5F5] rounded-lg flex flex-row px-2 justify-around items-center"
+        class="bg-[#F5F5F5] rounded-lg flex flex-row px-2 justify-around items-center riwayat-percakapan"
       >
         <img
           src="../public/assets/Icon/Chat Message.png"
@@ -129,11 +198,34 @@
         <p class="pl-4 text-xs">
           Saya merasa agak pusing dan lelah belakangan ini
         </p>
-        <img
-          src="../public/assets/Icon/Close.png"
-          alt=""
-          class="object-scale-down w-12 h-12"
-        />
+        <!-- Open the modal using ID.showModal() method -->
+        <button
+          class="px-0 mx-0 rounded-lg btn"
+          onclick="showDeleteConfirmation(this)"
+        >
+          <img
+            src="../public/assets/Icon/Close.png"
+            alt=""
+            class="object-scale-down w-12 h-12"
+          />
+        </button>
+
+        <!-- Modal Konfirmasi Hapus -->
+        <dialog class="modal" data-delete-target="riwayat-percakapan">
+          <div class="modal-box">
+            <h3 class="text-lg font-bold">Konfirmasi Hapus</h3>
+            <p class="py-4">Apakah Anda yakin ingin menghapus riwayat ini?</p>
+            <div class="modal-action">
+              <button
+                class="font-bold text-white bg-red-500 rounded-lg btn"
+                onclick="confirmDelete(this)"
+              >
+                Hapus
+              </button>
+              <button class="btn" onclick="cancelDelete(this)">Batal</button>
+            </div>
+          </div>
+        </dialog>
       </div>
 
       <!-- riwayat 4
@@ -197,7 +289,10 @@
         </li>
       </ul>
       <!-- Save and Reset Buttons -->
-      <div class="flex absolute space-x-4 top-[475px] p-2">
+      <div
+        class="flex absolute space-x-4 top-[475px] p-2"
+        style="bottom: -50px; top: 540px; height: 70px; left: 20px"
+      >
         <button
           id="save-button"
           class="px-4 py-2 text-white bg-[#45B3CB] rounded focus:outline-none"

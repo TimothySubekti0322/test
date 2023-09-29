@@ -125,6 +125,8 @@ resetBtn.addEventListener("click", () => {
 
 function createRiwayat() {
   const container = document.getElementById("container");
+
+  // Create a new "riwayat" element
   const newRiwayat = document.createElement("div");
   newRiwayat.classList.add(
     "bg-[#F5F5F5]",
@@ -133,16 +135,32 @@ function createRiwayat() {
     "flex-row",
     "px-2",
     "justify-around",
-    "items-center"
+    "items-center",
+    "riwayat-percakapan"
   );
 
-  // Customize the content of the new "riwayat" here if needed
+  // Customize the content of the new "riwayat"
   newRiwayat.innerHTML = `
-      <img src="../public/assets/Icon/Chat Message.png" alt="" class="object-scale-down w-12 h-12" />
-      <p class="pl-4 text-xs">Saya merasa agak pusing dan lelah belakangan ini</p>
+    <img src="../public/assets/Icon/Chat Message.png" alt="" class="object-scale-down w-12 h-12" />
+    <p class="pl-4 text-xs">Saya merasa agak pusing dan lelah belakangan ini</p>
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="px-0 mx-0 rounded-lg btn" onclick="showDeleteConfirmation(this)">
       <img src="../public/assets/Icon/Close.png" alt="" class="object-scale-down w-12 h-12" />
+    </button>
+    <!-- Modal Konfirmasi Hapus -->
+    <dialog class="modal" data-delete-target="riwayat-percakapan">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Konfirmasi Hapus</h3>
+        <p class="py-4">Apakah Anda yakin ingin menghapus riwayat ini?</p>
+        <div class="modal-action">
+          <button class="font-bold text-white bg-red-500 rounded-lg btn" onclick="confirmDelete(this)">Hapus</button>
+          <button class="btn" onclick="cancelDelete(this)">Batal</button>
+        </div>
+      </div>
+    </dialog>
   `;
 
+  // Append the new "riwayat" to the container
   container.appendChild(newRiwayat);
 
   // Change the button color after clicking
@@ -158,3 +176,36 @@ function createRiwayat() {
 // Add a click event listener to the "Save Message" button
 const saveButton = document.getElementById("save-button");
 saveButton.addEventListener("click", createRiwayat);
+
+// Fungsi untuk menampilkan modal konfirmasi
+function showDeleteConfirmation(button) {
+  const modal = button.nextElementSibling;
+  modal.showModal();
+}
+
+// Fungsi untuk menyembunyikan modal konfirmasi
+function hideDeleteConfirmation(modal) {
+  modal.close();
+}
+
+// Fungsi yang akan dijalankan jika pengguna mengonfirmasi penghapusan
+function confirmDelete(button) {
+  const modal = button.closest("dialog");
+  const targetClassName = modal.getAttribute("data-delete-target");
+  const targetElement = document.querySelector(`.${targetClassName}`);
+
+  // Hapus elemen riwayat percakapan dari DOM
+  if (targetElement) {
+    targetElement.remove();
+  }
+
+  // Sembunyikan modal konfirmasi setelah penghapusan
+  hideDeleteConfirmation(modal);
+}
+
+// Fungsi yang akan dijalankan jika pengguna membatalkan penghapusan
+function cancelDelete(button) {
+  const modal = button.closest("dialog");
+  // Tidak ada tindakan apa pun yang diambil saat pembatalan, cukup sembunyikan modal
+  hideDeleteConfirmation(modal);
+}
