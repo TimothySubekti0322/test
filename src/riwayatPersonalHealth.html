@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riwayat Personal Health</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@700&family=Volkhov:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="PersonalHealth.js"></script>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="p-2">
+      <div class="flex items-center justify-around px-4 mt-2 gap-x-8">
+        <a href="PersonalHealth.html"
+          ><img src="../public/image/backArrow.svg" alt=""
+        /></a>
+        <div class="pl-4 text-xl font-bold text-center poppins">
+          Riwayat Rekam Kesehatan Personal
+        </div>
+        <img
+          class="invisible"
+          src="../public/assets/Icon/Report File.png"
+          alt=""
+          class="mr-4"
+        />
+      </div>
+    </header>
+
+    <!-- Date Picker -->
+    <form class="flex justify-center mt-2">
+      <input type="date" id="date" name="date" />
+    </form>
+
+    <section
+      id="container"
+      class="flex flex-col justify-around mt-4 space-y-2 px-9"
+    >
+      <!-- riwayat ph 1 -->
+      <a href="detailRiwayatPersonalHealth.html">
+        <div
+          class="bg-[#EAF3F5] rounded-lg flex flex-row px-2 justify-around items-center riwayat-percakapan"
+        >
+          <img
+            src="../public/assets/Icon/Report File.png"
+            alt=""
+            class="object-scale-down w-6 h-6"
+          />
+          <p class="pl-4 font-bold text-s">30 September 2023</p>
+          <!-- Open the modal using ID.showModal() method -->
+          <button
+            class="bg-[#EAF3F5] px-0 mx-0 rounded-lg btn"
+            onclick="showDeleteConfirmation(this)"
+          >
+            <img
+              src="../public/assets/Icon/Close.png"
+              alt=""
+              class="object-scale-down w-12 h-12"
+            />
+          </button>
+
+          <!-- Modal Konfirmasi Hapus -->
+          <dialog class="modal" data-delete-target="riwayat-percakapan">
+            <div class="modal-box">
+              <h3 class="text-lg font-bold">Konfirmasi Hapus</h3>
+              <p class="py-4">Apakah Anda yakin ingin menghapus riwayat ini?</p>
+              <div class="modal-action">
+                <button
+                  class="font-bold text-white bg-red-500 rounded-lg btn"
+                  onclick="confirmDelete(this)"
+                >
+                  Hapus
+                </button>
+                <button class="btn" onclick="cancelDelete(this)">Batal</button>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </a>
+
+      <iframe
+        id="container-frame"
+        src="riwayatPersonalHealth.html"
+        onload="initializeContainer()"
+      ></iframe>
+    </section>
+    <script src="PersonalHealth.js"></script>
+  </body>
+</html>

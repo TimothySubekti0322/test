@@ -11,23 +11,277 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@700&family=Volkhov:wght@700&display=swap"
       rel="stylesheet"
     />
+    <!-- <script src="PersonalHealth.js"></script> -->
   </head>
   <body>
     <!-- Header Section -->
     <header class="p-2">
       <div class="flex items-center justify-around px-4 mt-2 gap-x-8">
-        <img src="../public/image/backArrow.svg" alt="" />
+        <a href="../index.html"
+          ><img src="../public/image/backArrow.svg" alt=""
+        /></a>
         <div class="text-xl font-bold text-center poppins">
           Rekam Kesehatan Personal
         </div>
-        <img src="../public/assets/Icon/Report File.png" alt="" class="mr-4" />
+        <a href="riwayatPersonalHealth.html"
+          ><img src="../public/assets/Icon/Report File.png" alt="" class="mr-4"
+        /></a>
       </div>
     </header>
-    <input
-      type="text"
-      id="datepicker"
-      placeholder="Select a date"
-      class="p-2 border rounded"
-    />
+
+    <!-- Date Picker -->
+    <form class="flex justify-center mt-2">
+      <input type="date" id="date" name="date" />
+    </form>
+
+    <!-- Date Picker 2 -->
+    <!-- <div id="datepickerId">
+      <div class="relative max-w-sm">
+        <div
+          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+        >
+          <svg
+            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+            />
+          </svg>
+        </div>
+        <input
+          datepicker
+          datepicker-format="mm/dd/yyyy"
+          type="text"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Select date"
+          id="datepickerId"
+        />
+      </div>
+    </div> -->
+
+    <section
+      id="container"
+      class="flex flex-col justify-around mt-4 space-y-2 px-9"
+    >
+      <!-- Berat Badan -->
+      <div class="flex flex-col px-2 bg-[#EAF3F5] rounded-2xl gap-y-0.5">
+        <!-- Layer 1 -->
+        <div class="flex flex-row items-center justify-between h-16">
+          <div class="flex flex-row items-center mt-2">
+            <img
+              src="../public/assets/Icon/Yoga.png"
+              class="object-scale-down w-12 h-16"
+            />
+            <h2 class="font-bold">Gaya Hidup</h2>
+          </div>
+          <img
+            src="../public/assets/Icon/Close.png"
+            class="object-scale-down w-16 h-16"
+          />
+        </div>
+
+        <!-- Layer 2 -->
+        <div class="flex flex-row items-center justify-between h-8">
+          <p class="px-5 text-xs">Berat saat ini (Kg)</p>
+          <input
+            type="text"
+            placeholder="0"
+            class="w-16 h-8 max-w-xs input input-bordered"
+          />
+        </div>
+
+        <!-- Layer 3 -->
+        <div class="flex flex-row items-center mt-2 gap-x-[0.125rem] h-8 mb-2">
+          <img
+            src="../public/assets/Icon/Clock.png"
+            class="object-scale-down w-16 h-16"
+          />
+          <p class="text-xs">3:19 PM</p>
+        </div>
+      </div>
+
+      <!-- Tekanan Darah -->
+      <div class="flex flex-col px-2 bg-[#EAF3F5] rounded-2xl gap-y-0.5">
+        <!-- Layer 1 -->
+        <div class="flex flex-row items-center justify-between h-16">
+          <div class="flex flex-row items-center mt-2">
+            <img
+              src="../public/assets/Icon/Drop of Blood.png"
+              class="object-scale-down w-12 h-16"
+            />
+            <h2 class="font-bold">Tekanan Darah</h2>
+          </div>
+          <img
+            src="../public/assets/Icon/Close.png"
+            class="object-scale-down w-16 h-16"
+          />
+        </div>
+
+        <!-- Layer 2 -->
+        <div class="flex flex-row items-center justify-between h-8">
+          <p class="px-5 text-xs">Tekanan Sistolik (mmHg)</p>
+          <input
+            type="text"
+            placeholder="0"
+            class="w-16 h-8 max-w-xs input input-bordered"
+          />
+        </div>
+
+        <!-- Layer 3 -->
+        <div class="flex flex-row items-center justify-between h-8">
+          <p class="px-5 text-xs">Tekanan Diastolik (mmHg)</p>
+          <input
+            type="text"
+            placeholder="0"
+            class="w-16 h-8 max-w-xs input input-bordered"
+          />
+        </div>
+
+        <!-- Layer 4 -->
+        <div class="flex flex-row items-center mt-2 gap-x-[0.125rem] h-8 mb-2">
+          <img
+            src="../public/assets/Icon/Clock.png"
+            class="object-scale-down w-16 h-16"
+          />
+          <p class="text-xs">3:19 PM</p>
+        </div>
+      </div>
+
+      <!-- Glukosamin -->
+      <div class="flex flex-col px-2 bg-[#EAF3F5] rounded-2xl gap-y-0.5">
+        <!-- Layer 1 -->
+        <div class="flex flex-row items-center justify-between h-16">
+          <div class="flex flex-row items-center mt-2">
+            <img
+              src="../public/assets/Icon/Drop of Blood.png"
+              class="object-scale-down w-12 h-16"
+            />
+            <h2 class="font-bold">Kolestrol</h2>
+          </div>
+          <img
+            src="../public/assets/Icon/Close.png"
+            class="object-scale-down w-16 h-16"
+          />
+        </div>
+
+        <!-- Layer 2 -->
+        <div class="flex flex-row items-center justify-between h-8">
+          <p class="px-5 text-xs">Nilai</p>
+          <input
+            type="text"
+            placeholder="0"
+            class="w-16 h-8 max-w-xs input input-bordered"
+          />
+        </div>
+
+        <!-- Layer 3 -->
+        <div class="flex flex-row items-center justify-between h-8 mt-2">
+          <p class="px-5 text-xs">Satuan</p>
+          <!-- Dropdown -->
+          <div>
+            <select
+              id="glukosaminUnit"
+              class="block w-[10 rem] px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+              <option value="glukosamin" class="text-s">mg/dl</option>
+              <!-- Tambahkan pilihan indikator pengukuran lainnya sesuai kebutuhan -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Layer 4 -->
+        <div class="flex flex-row items-center mt-2 gap-x-[0.125rem] h-8 mb-2">
+          <img
+            src="../public/assets/Icon/Clock.png"
+            class="object-scale-down w-16 h-16"
+          />
+          <p class="text-xs">3:19 PM</p>
+        </div>
+      </div>
+
+      <!-- Tambahkan pengukuran -->
+      <button
+        class="flex bg-[#EAF3F5] h-12 items-center justify-center rounded-2xl gap-x-[0.125rem]"
+        onclick="my_modal_4.showModal()"
+      >
+        <img
+          src="../public/assets/Icon/Plus.png"
+          class="object-scale-down w-16 h-16"
+        />
+        <h1 class="font-bold">Tambahkan Pengukuran</h1>
+      </button>
+
+      <dialog id="my_modal_4" class="modal">
+        <div class="w-11/12 max-w-5xl modal-box">
+          <h3 class="text-lg font-bold">Halo!</h3>
+          <p class="py-4">Silahkan Pilih Indikator Pengukuran Kesehatan</p>
+
+          <!-- Indikator Pengukuran (Pilihan) -->
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700"
+              >Pilih Indikator Pengukuran:</label
+            >
+            <select
+              id="measurementIndicator"
+              class="block w-full px-3 py-2 mt-1 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+              <option value="glukosamin">Glukosamin</option>
+              <!-- Tambahkan pilihan indikator pengukuran lainnya sesuai kebutuhan -->
+            </select>
+          </div>
+
+          <!-- Konten Indikator Pengukuran -->
+          <div id="measurementContent">
+            <!-- Konten Indikator Pengukuran akan ditampilkan di sini berdasarkan pilihan -->
+          </div>
+
+          <div class="flex items-center justify-end modal-action">
+            <!-- Choose button positioned beside Close button -->
+            <button id="chooseButton" class="btn">Choose</button>
+            <form method="dialog">
+              <!-- if there is a button, it will close the modal -->
+              <button id="cancelButton" class="btn">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Simpan pengukuran -->
+      <button id="simpanPengukuran">
+        <div class="flex justify-center h-12">
+          <div
+            class="flex bg-[#079D49] items-center justify-center rounded-2xl gap-x-[0.125rem] w-48"
+          >
+            <h1 class="font-bold text-white">Simpan</h1>
+          </div>
+        </div>
+      </button>
+    </section>
+
+    <!-- nyoba date picker -->
+    <!-- <label for="date-string">Date String</label>
+    <input type="date" id="date-string" /> -->
+    <!-- tanggal -->
+    <!-- Paragraf untuk menampilkan tanggal -->
+    <div class="flex items-center justify-start gap-x-[0.125rem] pl-6">
+      <img
+        src="../public/assets/Icon/Clock.png"
+        class="object-scale-down w-16 h-16"
+      />
+      <p id="date-string-value">Sabtu, 30 September 2023</p>
+    </div>
+
+    <!-- <iframe
+      id="container-frame"
+      src="riwayatPersonalHealth.html"
+      onload="initializeContainer()"
+    ></iframe> -->
+
+    <script src="PersonalHealth.js"></script>
+    <!-- <script type="module" src="./datepicker.js" charset="utf-8"></script> -->
   </body>
 </html>
