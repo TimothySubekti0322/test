@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Detail</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <link href="ChallengeDetail.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@700&family=Volkhov:wght@700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.2.2/cdn.js" defer></script>
+</head>
+
+<body>
+
+    <div class="relative w-full ">
+        <!-- Left -->
+        <div class="sm:w-4/12 sm:h-screen bg-[#D8E5E2] flex flex-col sm:p-16 px-12 pt-12 pb-16 sm:gap-y-2 items-center">
+            <h1 class="font-bold text-center poppins sm:text-[3rem] text-[2rem]">Run Challenge</h1>
+
+            <!-- circle -->
+            <div class="relative flex justify-center mx-4">
+                <svg class="transform translate-x-1 translate-y-1 h-80 w-80" aria-hidden="true"
+                    x-data="{ circumference: 130 * 2 * Math.PI, percent: 80 }">
+                    <circle class="text-[#E0BA9E]" stroke-width="10" stroke="currentColor" fill="transparent" r="120"
+                        cx="158" cy="160">
+                    </circle>
+                    <circle class="text-[#97C9DF]" stroke-width="10" stroke="currentColor" fill="transparent" r="90"
+                        cx="158" cy="160">
+                    </circle>
+                    <circle class="text-[#0089D9]" stroke-width="10" :stroke-dasharray="circumference"
+                        :stroke-dashoffset="circumference - percent / 160 * circumference" stroke-linecap="round"
+                        stroke="currentColor" fill="transparent" r="90" cx="158" cy="160"
+                        stroke-dasharray="314.1592653589793" stroke-dashoffset="62.83185307179585"></circle>
+                    <circle class="text-[#F25700]" stroke-width="10" :stroke-dasharray="circumference"
+                        :stroke-dashoffset="250" stroke-linecap="round" stroke="currentColor" fill="transparent" r="120"
+                        cx="158" cy="160" stroke-dasharray="314.1592653589793" stroke-dashoffset="62.83185307179585">
+                    </circle>
+                </svg>
+
+                <!-- Circle Text -->
+                <div class="absolute flex flex-col justify-center top-[5.5rem] align-items-center ">
+                    <div class="text-center text-[4rem] poppins">
+                        3
+                    </div>
+                    <div class="text-center text-[2rem] text-[#0089D9] font-medium">
+                        4500
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-around w-full mt-4 sm:w-4/5 sm:gap-x-2 gap-x-2">
+
+                <!-- Heart PTS -->
+                <div class="flex align-items">
+                    <img src="../public/image/blueHeart.svg" alt="" />
+                    <p class="text-center poppins  font-bold text-[1.5rem] ml-2 sm:ml-4">Heart Pts</p>
+                </div>
+
+                <!-- Heart Steps -->
+                <div class="flex items-center">
+                    <img src="../public/image/completeTask.svg" alt="" />
+                    <p class="text-center poppins  font-bold text-[1.5rem] ml-2 sm:ml-4">Steps</p>
+                </div>
+
+            </div>
+
+            <div class="flex justify-between w-full mt-6 sm:w-4/5 sm:gap-x-2 gap-x-6">
+                <!-- Kalori -->
+                <div class="flex align-items">
+                    <p class="text-center font-semibold text-[1.6rem] sm:ml-4">900<br /><span
+                            class="font-bold poppins text-[1.5rem]">kalori</span></p>
+                </div>
+
+                <!-- Km -->
+                <div class="flex items-center">
+                    <p class="ml-2 text-center font-semibold text-[1.6rem] sm:ml-4">3.43<br /><span
+                            class="font-bold poppins text-[1.5rem]">Km</span></p>
+                </div>
+
+                <!-- Langkah -->
+                <div class="flex items-center">
+                    <p class="text-center  font-semibold text-[1.6rem] sm:ml-4">4500<br /><span
+                            class="font-bold poppins text-[1.5rem]">Langkah</span></p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Right -->
+        <div class="absolute top-[37rem] left-0 right-0">
+
+            <div class="w-[90%] p-4 ml-auto mr-auto bg-white shadow-md rounded-2xl">
+                <div class="flex items-center justify-between w-full">
+                    <h1 class="text-[1.1rem] font-bold poppins">Target Harian Anda</h1>
+                    <img src="../public/image/chevronRight.svg" alt="" />
+                </div>
+                <p class=" text-[0.75rem] text-[#9B9B9B]" style="">7 Hari Terakhir</p>
+                <div class="flex items-center justify-between mt-4">
+                    <div>
+                        <p class="text-[1.5rem] font-semibold">1/7</p><span class="text-[#9B9B9B]">Tercapai</span>
+                    </div>
+                    <div>
+                        <img src="../public/image/task.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Target Mingguan -->
+            <div class="w-[90%] p-4 mt-4 ml-auto mr-auto bg-white shadow-md rounded-2xl">
+                <div class="flex items-center justify-between w-full">
+                    <h1 class="text-[1.1rem] font-bold poppins">Target Mingguan Anda</h1>
+                    <img src="../public/image/chevronRight.svg" alt="" />
+                </div>
+                <p class=" text-[0.75rem] text-[#9B9B9B]" style="">Oct 8 - 14</p>
+                <div class="flex justify-between mt-2">
+                    <div class="flex items-center space-x-3">
+                        <p class="text-[1.5rem] font-semibold">10/200 KM</p><progress
+                            class="w-44 progress progress-error bg-[#FBCDB3]" value="10" max="100"></progress>
+                    </div>
+                </div>
+                <p class="mt-2 text-black">
+                    Tantang diri Anda setiap minggu untuk mencapai jarak lari sejauh 200 km dalam satu minggu.
+                    Segeralah berlari !
+                </p>
+            </div>
+
+            <!-- Target Mingguan -->
+            <div class="w-[90%] p-4 mt-4 ml-auto mr-auto bg-white shadow-md rounded-2xl">
+                <div class="flex items-center justify-between w-full">
+                    <h1 class="text-[1.1rem] font-bold poppins">Team Challenge</h1>
+                    <img src="../public/image/chevronRight.svg" alt="" />
+                </div>
+                <p class=" text-[0.75rem] text-[#9B9B9B]" style="">July 1 2023 - August 1 2023</p>
+                <div class="flex justify-between mt-2">
+                    <div class="flex items-center space-x-3">
+                        <p class="text-[1.5rem] font-semibold">127/600 KM</p><progress
+                            class="w-44 progress progress-error bg-[#FBCDB3]" value="21" max="100"></progress>
+                    </div>
+                </div>
+                <p class="mt-2 text-black">
+                    Tantang diri dan teman anda setiap minggu untuk mencapai jarak lari sejauh 600 km dalam satu bulan.
+                    Segeralah berlari !
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
